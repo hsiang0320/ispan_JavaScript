@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>02varScope.html</title>
+</head>
+<body>
+    <script>
+        //case 1
+            // //廣域(全域)變數
+            // var a=100;
+            // //var a;
+            // //a=100;
+    
+            // //函數宣告定義
+            // function f(){
+            //     let a=10;
+            //     console.log(`function in a=${a}`);
+            //     console.log(`this.a=${this.a}`);
+            //     console.log(`window.a=${window.a}`);
+            // }
+    
+            // //呼叫函數
+            // console.log(`function out before call a=${a}`);
+            // f();
+            // console.log(`function out after call a=${a}`);
+
+        //case 2
+            // //廣域(全域)變數
+            // var a=100;
+            // //var a;
+            // //a=100;
+    
+            // //函數宣告定義
+            // function f(){
+            //     a=10;  //globlal varible
+            //     console.log(`function in a=${a}`);
+            // }
+    
+            // //呼叫函數
+            // console.log(`function out before call a=${a}`);
+            // f();
+            // console.log(`function out after call a=${a}`);
+
+            //case 3
+            //廣域(全域)變數
+            var a=100;
+    
+            //函數宣告定義
+            function f(){
+                var a=10;    //local variable           
+                for(let a=1;a<=3;a++){  //block variable
+                    console.log(`block a=${a}`);
+                }
+                console.log(`function in a=${a}`);
+            }
+    
+            //呼叫函數
+            console.log(`function out before call a=${a}`);
+            f();
+            console.log(`function out after call a=${a}`);
+    </script>
+</body>
+</html>

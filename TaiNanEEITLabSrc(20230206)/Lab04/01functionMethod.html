@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>01functionMethod.html</title>
+</head>
+<body>
+    <script>
+        //==========定義函數==================
+        //方法一函數宣告，定義帶參數的函數
+        function fAdd1(a,b){
+            return a+b;
+        }
+
+
+
+        //==========函數呼叫==================
+        //呼叫帶參數的函數
+        console.log(`fAdd1(1,2)=${fAdd1(1,2)}`);
+        console.log(`fAdd1(1,2)=${fAdd1(1)}`);//1+undefined=NAN
+        console.log(`fAdd1(1,2)=${fAdd1(1,2,3)}`);
+
+
+        //JavaScript沒有規定function的參數及呼叫function時給予的參數數量必須要一致
+        //少掉的參數為undefined，而多的參數會被忽略
+        //預設參數值(ES6)
+    
+         function fAdd2(a,b=200){
+            console.log(`b=${b}`);
+            return a+b;
+        }
+        console.log(`fAdd2(5)=${fAdd2(5)}`)
+
+
+        //==========定義函數==================
+        //方法二暱名函數
+       let fAdd3=function(a,b){//又稱function literal、function expression
+        return a+b;
+       }
+       console.log(`fAdd3=${fAdd3(5,9)}`);
+        
+       //IIFE
+       (function(a,b){
+        console.log(a+b) ;
+       })(1000,2000)//變數宣告 程式的進入點 main
+        
+
+        //==========定義函數==================
+        //方法三箭頭函數(arrow function)
+       let fAdd4=(a,b)=>{
+        return a+b;
+       }
+       console.log(`fAdd4=${fAdd4(50,90)}`);
+        //函數沒有參數
+        let fAdd5=()=>{
+            return 3000;
+        }
+        console.log(`fAdd5=${fAdd5()}`);
+        //如果statement 只有一行，return 和 {} 可省略
+        let fAdd6=()=>3000;
+        console.log(`fAdd6=${fAdd6()}`);
+
+        //只有一個參數，()可省略
+        let fAdd7=a=>a+1000;
+        // let fAdd7;
+        // fAdd7=a=>a+1000 變數提升 hosting
+        console.log(`fAdd7=${fAdd7(500)}`);
+
+        // 上下調換會有error 變成底下的運作方式
+        // let fAdd7;
+        // console.log(`fAdd7=${fAdd7(500)}`)
+        // fAdd7=a=>a+1000
+
+    console.log(`fAdd1=${fAdd1}`)    
+    console.log(`fAdd7=${fAdd7}`)
+    fAdd1=fAdd7
+    console.log(`fAdd1=${fAdd1}`)
+    //函數呼叫 函數名稱() ()相當於立即呼叫
+    //函數內容 函數名稱
+    </script>
+</body>
+</html>

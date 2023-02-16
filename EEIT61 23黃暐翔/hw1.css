@@ -1,0 +1,12 @@
+table{
+    border: 2px solid rgb(0, 170, 248);
+    font-size: 20px;
+    color: red;
+    background-color: rgb(179, 250, 250);
+    border-collapse: collapse;
+    
+}
+td{
+    border: 2px solid rgb(0, 170, 248);
+    padding: 5px;
+}

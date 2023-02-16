@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>02DataTypes.html</title>
+</head>
+<body>   
+    <div id="myDiv">
+        div
+    </div>
+    <script>
+        //數字變數
+        let a=10;
+        console.log(`a=${a},typeof a=${typeof a}`)
+        //字串變數
+        a="abc";
+        console.log(`a=${a},typeof a=${typeof a}`)
+        //布林變數             
+        let b=true;
+        console.log(`b=${b},typeof b=${typeof b}`)
+        let c=b+3;
+        console.log(`c=${c},typeof c=${typeof c}`)
+        if(c)
+            console.log(true);
+        //null
+        let n=null;
+        console.log(`n=${n},typeof n=${typeof n}`)
+        //如果沒有初始值，JavaScript會自動將變數的值初始化為undefined(預設值 default value)        
+        let u;
+        console.log(`u=${u},typeof u=${typeof u}`)
+
+        let i=undefined;
+        let j=i+2;
+        console.log(j);//NAN Not A Number
+
+        let myDiv=document.getElementById("myDiv");
+        console.log(myDiv.innerHTML);
+        //字串轉換為數值
+        console.log(`parseInt('123.45')=${parseInt('123.45')}`)
+        console.log(`parseInt('12a3.45')=${parseInt('12a3.45')}`)
+        console.log(`parseInt('a123.45')=${parseInt('a123.45')}`)
+        console.log(`Number('123.45')=${Number('123.45')}`)
+        console.log(`Number('12a3.45')=${Number('a12a3.45')}`)
+        console.log(`Number('a123.45')=${Number('a123.45')}`)
+        //數值轉換為字串
+
+    </script>
+</body>
+</html>

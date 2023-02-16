@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>01stringObject.html</title>
+</head>
+<body>
+    <div id="info"></div>
+    <script>
+        let str = "java script";  //字串變數        
+        console.log(typeof str);
+        //字串物件
+        let strObj=new String("java script hello");
+        console.log(typeof strObj);
+        console.log("strObj.charAt(3)="+strObj.charAt(3));
+        console.log("strObj.charCodeAt(3)="+strObj.charCodeAt(3));
+        console.log("strObj.indexOf('a')="+strObj.indexOf('a'));
+        console.log("strObj.lastIndexOf('a')="+strObj.lastIndexOf('a'));
+        console.log("strObj.lastIndexOf('@')="+strObj.lastIndexOf('@'));//找不到回傳-1
+        console.log("strObj.substr(5,3)="+strObj.substr(5,3));
+        console.log("strObj.substr(5)="+strObj.substr(5));
+        console.log("strObj.substring(5,8)="+strObj.substring(5,8));
+        console.log("strObj.split(' ')="+strObj.split(' '));
+        console.log("strObj.toUpperCase()="+strObj.toUpperCase());
+    </script>
+</body>
+</html>

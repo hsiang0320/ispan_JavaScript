@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01OperatorPrecedence.html</title>
+</head>
+
+<body>
+    <script>
+        //算術運算子++
+
+
+        //關係運算子
+        //值相等== 
+        //值及資料類型相等===
+        console.log(5=="5");//true
+        console.log(5==="5");//false 嚴格比較是否相等 包含值與資料型態
+        console.log(5===5);//true
+        //邏輯運算子
+        console.log(2 || 8);//2
+        console.log(2 && 8);//8
+        console.log(false && 3);//3
+        console.log(1 && 6 || 3);//6
+
+        //三元運算子（判斷式）?（真時回傳值）:（假時回傳值）
+        let x=5;
+        let y=x>0?x:-1;
+        console.log(y);//5
+        console.log(`x=${x},y=${y}`);
+        let i="abc";
+        let j=i?1:2;
+        console.log(`i=${i},j=${j}`);//1
+    </script>
+
+</body>
+
+</html>
