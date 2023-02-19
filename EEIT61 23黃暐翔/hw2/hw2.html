@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hw2.css">
+</head>
+
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Form Check</legend>
+            <div>
+                <label>姓名:</label>
+                <input type="text" id="idName">
+                <span id="idNamesp"></span><br>
+                <span class="span1">(1.不可空白 2.至少兩個字以上 3.必須全部為中文字)</span><br>
+            </div>
+            <div>
+            <label>密碼:</label>
+            <input type="password" id="idPwd">
+            <span id="idPwdsp"></span><br>
+            <span class="span1">(1.不可空白 2.至少6個字以上且包含英數字及特殊字元)</span><br>
+        </div>
+        <div>
+            <label>日期:</label>
+            <input type="text" id="idDate">
+            <span id="idDatesp"></span><br>
+            <span class="span1">(格式:西元年/月/日(yyyy/mm/dd))</span>
+        </div>
+        </fieldset>
+    </form>
+    <script src="hw2.js"></script>
+</body>
+
+</html>

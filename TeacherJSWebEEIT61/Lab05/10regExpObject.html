@@ -9,19 +9,24 @@
     <br />
     <input type="button" value="checkEmail" onclick="chkEmail();" />
     <script>
-        /*
-            let str="Is this all there is?";
-            let re=new RegExp("is","gi");
-            console.log(str.match(re));	
-        */
+       
+            // let str="Is this all there is?";
+            // let re=new RegExp("is","g");
+            // console.log(str.match(re));	
+        
             function chkEmail() {
                 //取得元素值
                 let theEmail = document.getElementById("idEmail").value;
                 //建立RegExp物件語法 2
-                let re = /^.+@.+\..{2,3}$/;
+                // let re1 = /^.+@.+\..{2,3}$/;  //literal regexp
+                let re1 = /^[\w+-_]+@.+\..{2,3}$/; 
                 //建立RegExp物件語法 1
-    
-    
+                let re2=new RegExp("^.+@.+\\..{2,3}$");
+                // alert(`re1=${re1}\nre2=${re2}`);
+
+                // let re=new RegExp("^[\w+]+@.+\\..{2,3}$");
+
+                let re=/[\u4e00-\u9fff]/
                 if (re.test(theEmail))
                     window.alert("successful");
                 else
